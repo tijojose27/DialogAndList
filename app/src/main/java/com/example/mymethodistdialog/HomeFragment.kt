@@ -8,7 +8,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mymethodistdialog.databinding.FragmentHomeBinding
@@ -30,7 +29,9 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         binding.bottomSheetBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_bottomSheetFragment)
+//            findNavController().navigate(R.id.action_homeFragment_to_bottomSheetFragment)
+            val modalBottomSheet = BottomSheetFragment()
+            modalBottomSheet.show(parentFragmentManager, BottomSheetFragment.TAG)
         }
 
         //BIND TO LAYOUT

@@ -13,4 +13,31 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="ShapeAppearance.MyMethodist.RoundedButton"
+        parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+        <item name="colorPrimary">@color/blue_myMethodist</item>
+        <item name="colorPrimaryVariant">@color/blue_myMethodist</item>
+    </style>
+
+    <style name="Widget.MyMethodist.Button.RoundedButton"
+        parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearance">@style/ShapeAppearance.MyMethodist.RoundedButton</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MyMethodistRoundedBottomSheet" parent="">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerSizeTopLeft">25dp</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopRight">25dp</item>
+    </style>
+
+    <style name="ThemeOverlay.MyMethodist.BottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.MyMethodist.BottomSheet</item>
+    </style>
+    <style name="Widget.MyMethodist.BottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyMethodistRoundedBottomSheet</item>
+    </style>
 </resources>
